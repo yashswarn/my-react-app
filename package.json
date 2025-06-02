@@ -1,6 +1,6 @@
 {
-  "name": "note-saver",
-  "homepage": "https://yashswarn.github.io/note-saver/",
+  "name": "my-react-app",
+  "homepage": "https://yashswarn.github.io/my-react-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
