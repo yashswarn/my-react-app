@@ -49,16 +49,16 @@ const Paste = () => {
                   </div>
                   <div className=''>
                   <div className='flex flex-row  justify-center gap-5'>
-                    <button className="p-2 bg-white border rounded  hover:bg-gray-100">
                     <a href={`/?pasteId=${paste?._id}`}>
-                      <FaEdit className={iconStyle} />
+                      <button className="p-2 bg-white border rounded  hover:bg-gray-100">
+                        <FaEdit className={iconStyle} />
+                      </button>
                     </a>
-                    </button>
-                    <button className="p-2 bg-white rounded hover:bg-gray-100">
                     <a href={`/pastes/${paste?._id}`}>
-                      <FaEye className={iconStyle} />
+                      <button className="p-2 bg-white rounded hover:bg-gray-100">
+                        <FaEye className={iconStyle} />
+                      </button>
                     </a>
-                    </button>
                     
                     <button onClick={()=>handleDelete(paste?._id)} className='p-2 bg-white rounded hover:bg-gray-100'>
                       <FaTrash className={iconStyle} />
@@ -75,11 +75,16 @@ const Paste = () => {
                       className='p-2 bg-white border rounded hover:bg-gray-100'
                       onClick={() => {
                         if (navigator.share) {
-                          navigator
-                            .share({
-                              title: paste.title,
-                              text: paste.content,
-                            })
+                          // navigator
+                          //   .share({
+                          //     title: paste.title,
+                          //     text: paste.content,
+                          //   })
+                            navigator.share({
+                                title: paste.title,
+                                text: `${paste.title}\n\n${paste.content}`,
+                                })
+
                             .then(() => toast.success('Shared successfully'))
                             .catch((error) => {
                               console.error('Share failed:', error);

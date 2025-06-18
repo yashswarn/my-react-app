@@ -47,7 +47,7 @@ const Home = () => {
     <div>
     <div className='flex flex-row gap-12'>
         <input
-            className='border border-gray-300 pl-5 pr-5 rounded min-w-[1011px] bg-white text-black'
+            className='border border-gray-300 pl-5 pr-5  rounded min-w-[1004px] bg-white text-black'
             type='text'
             placeholder='Enter title here'
             value={title}
@@ -66,7 +66,7 @@ const Home = () => {
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}
-            rows={17}
+            rows={16}
         >
         </textarea>
     </div>

@@ -6,6 +6,11 @@ import {Provider} from 'react-redux'
 import {store} from './store.js'
 import { Toaster } from 'react-hot-toast'
 
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <Provider store={store}>
@@ -14,3 +19,20 @@ createRoot(document.getElementById('root')).render(
   </Provider>
   </StrictMode>,
 )
+
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//     <Provider store={store}>
+//     <App />
+//     <Toaster/>
+//   </Provider>
+//       {/* <App /> */}
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
+
+
+
+
