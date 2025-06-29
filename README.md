@@ -27,6 +27,8 @@ A basic React.js project scaffolded using Create React App for learning and comp
 - JavaScript
 - CSS
 
+- Live demo:  https://my-react-app-35st-oe1n972u7-yashswarns-projects.vercel.app/
+
 ## 📦 How to Run Locally
 ```bash
 git clone https://github.com/yashswarn/my-react-app.git
