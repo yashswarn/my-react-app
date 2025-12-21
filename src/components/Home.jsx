@@ -45,28 +45,28 @@ const Home = () => {
 
   return (
     <div>
-    <div className='input-div flex flex-row gap-12'>
+    <div className='input-div flex flex-col gap-4  sm:gap-6 lg:flex-row'>
         <input
-            className='h-10 border border-gray-300 pl-5 pr-5 min-w-[985px]  rounded  bg-white text-black'
+            className='input-element border  border-gray-300 px-5 py-2  sm:min-w-[550px] md:min-w-[850px] lg:min-w-[1025px] rounded  bg-white text-black'
             type='text'
             placeholder='Enter title here'
             value={title}
             onChange={(e)=>setTitle(e.target.value)}
         />
 
-        <button onClick={createPaste} className='h-10 rounded bg-blue-600 text-xs'>
+        <button onClick={createPaste} className='min-w-[100px] rounded bg-blue-600 text-1xl text-center'>
         {
-            pasteId?"Update My Paste":"Create My Paste"
+            pasteId?"Update":"Create"
         }
         </button>   
     </div>
     <div className='text-area-div mt-8'>
         <textarea
-            className='text-area pt-3 border border-gray-300 rounded min-w-[1150px] pl-5 pr-5 bg-white text-black'
+            className=' text-area pt-3 border border-gray-300 rounded min-w-[550px] sm:min-w-[750px] md:min-w-[850px] lg:min-w-[1150px] pl-5 pr-5 bg-white text-black'
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}
-            rows={15}
+            rows={13}
         >
         </textarea>
     </div>

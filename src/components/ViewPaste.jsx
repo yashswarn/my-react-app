@@ -15,7 +15,7 @@ const ViewPaste = () => {
     <div>
     <div className='flex flex-row gap-12'>
         <input
-            className='border border-gray-300 pl-5 pr-5 p-3 rounded min-w-[1205px] bg-white text-gray-400'
+            className='sm:min-w-[700px] md:min-w-[970px] lg:min-w-[1150px]  border border-gray-300 pl-5 pr-5 p-3 rounded min-w-[550px] bg-white text-gray-400'
             type='text'
             placeholder='Enter title here'
             value={paste.title}
@@ -26,11 +26,11 @@ const ViewPaste = () => {
     </div>
     <div className='mt-8'>
         <textarea
-            className='border text-gray-400 border-gray-300 rounded min-w-[1205px] pl-5 pr-5 bg-white '
+            className='sm:min-w-[700px] md:min-w-[970px] lg:min-w-[1150px] border text-gray-400 border-gray-300 rounded min-w-[550px] pl-5 pr-5 bg-white '
             placeholder='Enter content here...'
             value={paste.content}
             onChange={(e)=>setValue(e.target.value)}
-            rows={17}
+            rows={15}
         >
         </textarea>
     </div>
