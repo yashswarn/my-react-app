@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { addToPastes, updateToPastes } from '../redux/pasteSlice';
-
+import './Home.css'
 const Home = () => {
     const [title,setTitle]=useState("");
     const [value,setValue]=useState('');
@@ -45,28 +45,28 @@ const Home = () => {
 
   return (
     <div>
-    <div className='flex flex-row gap-12'>
+    <div className='input-div flex flex-row gap-12'>
         <input
-            className='border border-gray-300 pl-5 pr-5  rounded min-w-[1004px] bg-white text-black'
+            className='h-10 border border-gray-300 pl-5 pr-5 min-w-[985px]  rounded  bg-white text-black'
             type='text'
             placeholder='Enter title here'
             value={title}
             onChange={(e)=>setTitle(e.target.value)}
         />
 
-        <button onClick={createPaste} className='rounded bg-blue-600 text-1xl'>
+        <button onClick={createPaste} className='h-10 rounded bg-blue-600 text-xs'>
         {
             pasteId?"Update My Paste":"Create My Paste"
         }
         </button>   
     </div>
-    <div className='mt-8'>
+    <div className='text-area-div mt-8'>
         <textarea
-            className='pt-3 border border-gray-300 rounded min-w-[1215px] pl-5 pr-5 bg-white text-black'
+            className='text-area pt-3 border border-gray-300 rounded min-w-[1150px] pl-5 pr-5 bg-white text-black'
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}
-            rows={16}
+            rows={15}
         >
         </textarea>
     </div>
