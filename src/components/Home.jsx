@@ -46,7 +46,7 @@ const Home = () => {
     <div>
     <div className='input-div flex flex-col gap-4  sm:gap-6 lg:flex-row'>
         <input
-            className='input-element border  border-gray-300 px-5 py-2  sm:min-w-[550px] md:min-w-[850px] lg:min-w-[1025px] rounded  bg-white text-black'
+            className='border  border-gray-300 px-5 py-2  sm:min-w-[550px] md:min-w-[850px] lg:min-w-[1025px] rounded  bg-white text-black'
             type='text'
             placeholder='Enter title here'
             value={title}
@@ -61,7 +61,7 @@ const Home = () => {
     </div>
     <div className='text-area-div mt-8'>
         <textarea
-            className=' text-area pt-3 border border-gray-300 rounded min-w-[550px] sm:min-w-[750px] md:min-w-[850px] lg:min-w-[1150px] pl-5 pr-5 bg-white text-black'
+            className=' text-area pt-3 border border-gray-300 rounded min-w-[450px] sm:min-w-[750px] md:min-w-[850px] lg:min-w-[1150px] pl-5 pr-5 bg-white text-black'
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}

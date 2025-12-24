@@ -15,14 +15,13 @@ const ViewPaste = () => {
     <div>
     <div className='flex flex-row gap-12'>
         <input
-            className='sm:min-w-[700px] md:min-w-[970px] lg:min-w-[1150px]  border border-gray-300 pl-5 pr-5 p-3 rounded min-w-[550px] bg-white text-gray-400'
+            className='sm:min-w-[700px] md:min-w-[970px] lg:min-w-[1150px]  border border-gray-300 px-5 py-2 rounded min-w-[550px] bg-white text-gray-400'
             type='text'
             placeholder='Enter title here'
             value={paste.title}
             onChange={(e)=>setTitle(e.target.value)}
         />
-
-       
+   
     </div>
     <div className='mt-8'>
         <textarea
