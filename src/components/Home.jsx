@@ -65,7 +65,7 @@ const Home = () => {
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}
-            rows={13}
+            rows={15}
         >
         </textarea>
     </div>

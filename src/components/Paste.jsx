@@ -22,13 +22,13 @@ const Paste = () => {
   return (
     <div>
       <input
-        className="px-5 py-2 rounded min-w-[550px]  sm:min-w-[700px] md:min-w-[960px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
+        className="px-5 py-2 rounded min-w-[360px] sm:min-w-[700px] md:min-w-[960px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
         type="search"
         placeholder="Search paste here..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="flex flex-col sm:min-w-[600px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
+      <div className="min-w-[360px] flex flex-col sm:min-w-[600px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
         <div className="flex text-2xl font-bold">All Pastes</div>
         <hr />
         {filteredData.length > 0 &&
