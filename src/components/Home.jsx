@@ -33,7 +33,13 @@ const Home = () => {
         }
         else{
             // create
-            dispatch(addToPastes(paste))
+            if(paste.title==='' && paste.content===''){
+                alert('Please enter title and description!' );
+            }
+            else{
+                dispatch(addToPastes(paste))
+
+            }
         }
 
         // after creation or updation
@@ -44,16 +50,15 @@ const Home = () => {
 
   return (
     <div>
-    <div className='input-div flex flex-col gap-4  sm:gap-6 lg:flex-row'>
+    <div className=' flex flex-col gap-4  sm:gap-6 lg:flex-row'>
         <input
-            className='border  border-gray-300 px-5 py-2  sm:min-w-[550px] md:min-w-[850px] lg:min-w-[1025px] rounded  bg-white text-black'
+            className='text-xl sm:text-base min-w-[360px] border  border-gray-300 px-5 py-2  sm:min-w-[550px] md:min-w-[850px] lg:min-w-[1025px] rounded  bg-white text-black'
             type='text'
             placeholder='Enter title here'
             value={title}
             onChange={(e)=>setTitle(e.target.value)}
         />
-
-        <button onClick={createPaste} className='min-w-[100px] rounded bg-blue-600 text-1xl text-center'>
+        <button onClick={createPaste} className='text-xl sm:text-base min-w-[100px] rounded bg-blue-600 text-1xl text-center'>
         {
             pasteId?"Update":"Create"
         }
@@ -61,7 +66,7 @@ const Home = () => {
     </div>
     <div className='text-area-div mt-8'>
         <textarea
-            className=' text-area pt-3 border border-gray-300 rounded min-w-[360px] sm:min-w-[750px] md:min-w-[850px] lg:min-w-[1150px] pl-5 pr-5 bg-white text-black'
+            className='text-xl sm:text-base pt-3 border border-gray-300 rounded min-w-[360px] sm:min-w-[750px] md:min-w-[850px] lg:min-w-[1150px] px-5 bg-white text-black'
             placeholder='Enter content here...'
             value={value}
             onChange={(e)=>setValue(e.target.value)}

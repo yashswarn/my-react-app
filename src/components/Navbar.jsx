@@ -5,11 +5,11 @@ const Navbar = () => {
   return (
     <div className='flex gap-10 justify-start mb-4 bg-'>
       <NavLink
-      to="/">
+      to="/" className='text-xl sm:text-lg '>
         Home
       </NavLink>
       <NavLink
-      to="/pastes"
+      to="/pastes" className='text-xl sm:text-lg'
       >
         Pastes
       </NavLink>

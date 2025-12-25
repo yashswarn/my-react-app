@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromPastes } from "../redux/pasteSlice"; // adjust the path as needed
 import { formatDate } from "../redux/formatDate";
+import { Link } from "react-router-dom";
 import { FaEdit, FaTrash, FaEye, FaCopy, FaShareAlt } from "react-icons/fa";
 
 const Paste = () => {
@@ -22,27 +23,27 @@ const Paste = () => {
   return (
     <div>
       <input
-        className="px-5 py-2 rounded min-w-[360px] sm:min-w-[700px] md:min-w-[960px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
+        className="text-xl min-w-[360px] sm:text-base  px-5 py-2 rounded  sm:min-w-[700px] md:min-w-[960px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
         type="search"
         placeholder="Search paste here..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="min-w-[360px] flex flex-col sm:min-w-[600px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
-        <div className="flex text-2xl font-bold">All Pastes</div>
+      <div className="flex flex-col  sm:min-w-[600px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
+        <div className="flex text-3xl font-bold ps-2">All Pastes</div>
         <hr />
         {filteredData.length > 0 &&
           filteredData.map((paste) => {
             return (
               <div
-                className="border rounded p-5 flex flex-col lg:flex-row justify-between gap-3"
+                className="border rounded p-2 flex flex-col lg:flex-row justify-between gap-3"
                 key={paste?._id}
               >
-                <div className="">
+                <div className="text-l">
                   <div className="text-left text-3xl font-medium flex mb-2">
                     {paste.title}
                   </div>
-                  <div className="text-left text-xs text-gray-500 flex pl-1">
+                  <div className=" text-left text-xl sm:text-base text-gray-500 flex ">
                     {paste.content}
                   </div>
                 </div>
@@ -80,11 +81,7 @@ const Paste = () => {
                       className="p-2 bg-white border rounded hover:bg-gray-100"
                       onClick={() => {
                         if (navigator.share) {
-                          // navigator
-                          //   .share({
-                          //     title: paste.title,
-                          //     text: paste.content,
-                          //   })
+                          
                           navigator
                             .share({
                               title: paste.title,
