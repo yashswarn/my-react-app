@@ -23,13 +23,13 @@ const Paste = () => {
   return (
     <div>
       <input
-        className="text-xl min-w-[360px] sm:text-base  px-5 py-2 rounded  sm:min-w-[700px] md:min-w-[960px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
+        className="text-xl w-full sm:text-base  px-5 py-2 rounded  sm:min-w-[300px] md:min-w-[850px] lg:min-w-[1135px] mb-5 p-2 bg-white border border-gray-300 text-black"
         type="search"
         placeholder="Search paste here..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="flex flex-col  sm:min-w-[600px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
+      <div className="flex flex-col w-full max-w-[360px]   sm:min-w-[575px] md:min-w-[850px] lg:min-w-[1135px] gap-4 rounded border border-gray-300 p-3 text-black">
         <div className="flex text-3xl font-bold ps-2">All Pastes</div>
         <hr />
         {filteredData.length > 0 &&
@@ -39,7 +39,7 @@ const Paste = () => {
                 className="border rounded p-2 flex flex-col lg:flex-row justify-between gap-3"
                 key={paste?._id}
               >
-                <div className="text-l">
+                <div className="overflow-scroll sm:overflow-auto md:overflow-auto lg:overflow-auto">
                   <div className="text-left text-3xl font-medium flex mb-2">
                     {paste.title}
                   </div>
@@ -81,7 +81,6 @@ const Paste = () => {
                       className="p-2 bg-white border rounded hover:bg-gray-100"
                       onClick={() => {
                         if (navigator.share) {
-                          
                           navigator
                             .share({
                               title: paste.title,
@@ -101,7 +100,9 @@ const Paste = () => {
                       <FaShareAlt className={iconStyle} />
                     </button>
                   </div>
-                  <div className="flex justify-start pl-2">Created At: {formatDate(paste.createdAt)}</div>
+                  <div className="flex justify-start pl-2">
+                    Created At: {formatDate(paste.createdAt)}
+                  </div>
                 </div>
               </div>
             );

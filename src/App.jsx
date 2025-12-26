@@ -1,46 +1,46 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Paste from './components/Paste';
-import ViewPaste from './components/ViewPaste'
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Paste from "./components/Paste";
+import ViewPaste from "./components/ViewPaste";
 
-const router=createBrowserRouter(
-  [
-    {
-      path:"/",
-      element:
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
       <div>
-        <Navbar/>
-        <Home/>
+        <Navbar />
+        <Home />
       </div>
-    },
-    {
-      path:"/pastes",
-      element:
+    ),
+  },
+  {
+    path: "/pastes",
+    element: (
       <div>
-        <Navbar/>
-        <Paste/>
+        <Navbar />
+        <Paste />
       </div>
-    },
-    {
-      path:"/pastes/:id",
-      element:
+    ),
+  },
+  {
+    path: "/pastes/:id",
+    element: (
       <div>
-        <Navbar/>
-        <ViewPaste/>
+        <Navbar />
+        <ViewPaste />
       </div>
-    },
-  ]
-);
+    ),
+  },
+]);
 
 function App() {
-
   return (
     <div>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
